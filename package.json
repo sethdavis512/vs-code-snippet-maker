@@ -1,13 +1,13 @@
 {
     "name": "snippet-maker",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "snippet-maker-script.js",
     "scripts": {
-        "start": "nodemon"
+        "start": "nodemon --watch index.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "Seth Davis",
     "license": "ISC",
     "dependencies": {
         "prettier": "^1.14.3"

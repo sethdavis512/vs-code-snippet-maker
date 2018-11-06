@@ -1,0 +1,12 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+function Panel({ children, className }) {
+    return <section className={`panel ${className}`}>{children}</section>;
+}
+
+Panel.propTypes = {
+    className: PropTypes.string
+};
+
+export default Panel;
