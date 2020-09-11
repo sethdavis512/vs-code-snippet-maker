@@ -1,15 +1,36 @@
 {
-    "name": "snippet-maker",
+    "name": "vs-snippet-maker",
     "version": "0.0.1",
-    "description": "",
-    "main": "snippet-maker-script.js",
+    "main": "dist/index.js",
     "scripts": {
-        "start": "nodemon --watch index.js"
+        "start": "node dist/index.js",
+        "build.tsc": "tsc",
+        "build.bundle": "rollup -c",
+        "minify": "terser --compress --mangle --toplevel --output dist/index.js -- dist/index.js",
+        "build": "npm run build.tsc && npm run build.bundle && npm run minify",
+        "build.dev": "npm run build.tsc && npm run build.bundle",
+        "dev": "npm run build.dev && npm start",
+        "version": "npm build"
     },
-    "keywords": [],
-    "author": "Seth Davis",
-    "license": "ISC",
+    "files": [
+        "dist/index.js"
+    ],
+    "bin": {
+        "snippetMaker": "dist/index.js"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^7.3.1",
+        "prettier": "^2.1.1",
+        "rollup": "^2.3.3",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "terser": "^4.6.10",
+        "tslint": "^6.1.1",
+        "tslint-ionic-rules": "0.0.21",
+        "typescript": "^3.8.3"
+    },
     "dependencies": {
-        "prettier": "^1.14.3"
+        "inquirer": "^7.3.3"
     }
 }
