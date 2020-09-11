@@ -16,7 +16,7 @@
         "dist/index.js"
     ],
     "bin": {
-        "snippetMaker": "dist/index.js"
+        "snippet-maker": "dist/index.js"
     },
     "devDependencies": {
         "@types/inquirer": "^7.3.1",

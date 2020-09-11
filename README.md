@@ -11,5 +11,5 @@ or
 ```
 npm i && npm run build
 npm link
-snippetMaker path/to/file
+snippet-maker path/to/file
 ```
